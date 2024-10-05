@@ -1,6 +1,8 @@
 plugins {
     id("java")
     id("application")
+    id("io.ktor.plugin") version "2.3.12"
+
 }
 
 group = "org.example"
@@ -20,11 +22,10 @@ dependencies {
 application {
     mainClass.set("org.example.Main")
 }
-tasks.jar {
-    manifest {
-        attributes(
-            "Main-Class" to "org.example.Main"
-        )
+
+ktor {
+    fatJar {
+        archiveFileName.set(rootProject.name + ".jar")
     }
 }
 tasks.test {

@@ -28,7 +28,7 @@ This project provides functionality to convert BPMN models into a graph data str
    Use Gradle to build the project:
 
    ```bash
-   ./gradlew build
+   ./gradlew buildFatJar
    ```
 
 3. **Configure Dependencies**
@@ -52,7 +52,7 @@ This project provides functionality to convert BPMN models into a graph data str
    You can run the application using the following command, providing the start and end node IDs as command-line arguments:
 
    ```bash
-   java -cp build/libs/your-project-name.jar Main approveInvoice invoiceProcessed
+   java -jar build/libs/your-project-name.jar approveInvoice invoiceProcessed
    ```
 
    Replace `traverse-bpm-diagram.jar` with the actual name of your generated JAR file (update settings.gradle.kts).
